@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Bis; 
 use Illuminate\Http\Request;
 
 class BisController extends Controller
@@ -10,28 +10,58 @@ class BisController extends Controller
 
     function index()
     {
-        $dataBis = session()->get('dataBisNew');
-        return view('bis.index', compact('dataBis'));
+        $bisData = Bis::get();
+        return view('backend.bis.index', compact('bisData'));
     }
 
     function create()
     {
-        return view('bis.form');
+        return view('backend.bis.create');
     }
 
     function store(Request $request)
     {
+        $bisData = $request->validate([
+            'nama' => 'required',
+            'kode' => 'required',
+            'nomor_polisi' => 'required',
+            'jumlah_unit' => 'required',
+            'jurusan' => 'required',
+            'tipe_bis_id' => 'required'
+        ]);
 
-        $namaBis = $request->nama_bis;
-        $merkBis = $request->merk_bis;
+        Bis::create($bisData);
 
-        $dataBisBaru = [
-            'namaBis' => $namaBis,
-            'merkBis' => $merkBis
-        ];
+        return redirect()->to('/bis');
+    }
 
-        array_push($this->arrayBis, $dataBisBaru);
+    function edit($id)
+    {
+        $bisData = Bis::find($id);
+        return view('backend.bis.edit', compact('bisData'));
+    }
 
-        return redirect()->to('/bis')->with('dataBisNew', $this->arrayBis);
+    function update($id, Request $request)
+    {
+        $validasiBis = $request->validate([
+            'nama' => 'required',
+            'kode' => 'required',
+            'nomor_polisi' => 'required',
+            'jumlah_unit' => 'required',
+            'jurusan' => 'required',
+            'tipe_bis_id' => 'required'
+        ]);
+
+        $bisData = Bis::find($id);
+        $bisData->update($validasiBis);
+
+        return redirect()->to('/bis');
+    }
+
+    function delete($id)
+    {
+        $bisData = Bis::find($id);
+        $bisData->delete();
+        return redirect()->to('/bis');
     }
 }
