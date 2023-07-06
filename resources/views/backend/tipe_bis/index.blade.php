@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Tipe Bis</h1>
+        <h1 class="mt-4"><i class="bx bxs-car-wash bx-md"></i> Tipe Bis</h1>
         <div class="d-flex justify-content-between mb-3">
             <!-- Breadcrum -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1">
                 <li class="breadcrumb-item">
-                    <a href="index">Admin</a>
+                    <a href="/index">Admin</a>
                 </li>
                 <li class="breadcrumb-item">
                     <a href="javascript:void(0);">Tipe Bis</a>
@@ -26,6 +26,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Tipe Bis</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -34,16 +35,35 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$tipeBis->tipe}}</td>
+                                <td><span class="badge bg-label-success me-1">Active</span></td>
                                 <td>
                                     <a href="/tipebis/edit/{{ $tipeBis->id }}">
                                     <button type="button" class="btn rounded-pill btn-icon btn-outline-warning">
                                         <span class="tf-icons bx bxs-pencil"></span>
                                     </button>
                                     </a>
-                                    <a href="/tipebis/delete/{{ $tipeBis->id }}">
-                                    <button type="button" class="btn rounded-pill btn-icon btn-outline-danger">
+                                    <button type="button" class="btn rounded-pill btn-icon btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalToggle">
                                         <span class="tf-icons bx bxs-trash"></span>
-                                    </button></a>
+                                    </button>
+                                    <!-- Modal 1-->
+                                    <div class="modal fade" id="modalToggle">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="alert alert-danger" role="alert">This is a danger alert -- check it out ! <i class="bx bxs-error-alt"></i></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">Are you sure, you want to delete type {{$tipeBis->tipe}} ?</div>
+                                                <div class="modal-footer">
+                                                    <a href="/tipebis/delete/{{ $tipeBis->id }}">
+                                                    <button class="btn btn-danger" >
+                                                        Delete Data 
+                                                    </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
                                 </td>
                             </tr>
                             @endforeach

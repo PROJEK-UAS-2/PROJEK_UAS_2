@@ -4,10 +4,22 @@
     <div class="container-fluid px-4"> 
         <h1 class="mt-4">Tipe Bis</h1> 
         <div class="d-flex justify-content-between mb-3"> 
-            <ol class="breadcrumb"> 
-                <li class="breadcrumb-item active">Edit Data Tipe Bis</li> 
-            </ol> 
-            <a href="/tipebis" class="btn btn-warning">kembali</a> 
+            <!-- Breadcrum -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-style1">
+                    <li class="breadcrumb-item">
+                        <a href="/index">Admin</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/tipebis">Tipe Bis</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="javascript:void(0);">Edit Data Tipe Bis</a>
+                    </li>
+                </ol>
+            </nav>
+            <!-- /Breadcrumb --> 
+            <a href="/tipebis" class="btn btn-warning"><i class="bx bx-arrow-back"></i> kembali</a> 
         </div> 
         <div class="card shadow"> 
             <div class="card-body"> 
@@ -15,7 +27,7 @@
                     @csrf 
                     <div class="form-group"> 
                         <label for="">Tipe Bis</label> 
-                        <input type="text" class="form-control" name="tipe" value="{{$tipeBisData->tipe}}" required> 
+                        <input type="text" class="form-control" name="tipe" value="{{$tipeBisData->tipe}}" placeholder="Masukan Tipe Bis" required> 
 					</div> 
                     <div class="form-group mt-3"> 
                         <button class="form-control btn btn-primary" type="submit">Simpan</button> 

@@ -8,7 +8,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1">
                 <li class="breadcrumb-item">
-                    <a href="index">Admin</a>
+                    <a href="/index">Admin</a>
                 </li>
                 <li class="breadcrumb-item">
                     <a href="/tipebis">Tipe Bis</a>

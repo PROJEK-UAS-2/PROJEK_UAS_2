@@ -24,36 +24,36 @@
             <span class="menu-header-text">Admin | Pages</span>
         </li>
         <!-- Bis -->
-        <li class="menu-item">
-            <a href="/" class="menu-link {{request()->segment(1) == "bis" ? "active" : ""}}">
+        <li class="menu-item {{request()->segment(1) == "bis" ? "active" : ""}}">
+            <a href="/" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-bus bx-sm"></i>
                 <div data-i18n="Basic">Bis</div>
             </a>
         </li>
         <!-- Supir -->
-        <li class="menu-item">
-            <a href="/" class="menu-link {{request()->segment(1) == "supir" ? "active" : ""}}">
+        <li class="menu-item  {{request()->segment(1) == "supir" ? "active" : ""}}">
+            <a href="/supir" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user bx-sm"></i>
                 <div data-i18n="Boxicons">Supir</div>
             </a>
         </li>
         <!-- Tipe Bis -->
-        <li class="menu-item">
-            <a href="/" class="menu-link {{request()->segment(1) == "tipebis" ? "active" : ""}}">
+        <li class="menu-item {{request()->segment(1) == "tipebis" ? "active" : ""}}">
+            <a href="/tipebis" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-car-wash bx-sm"></i>
                 <div data-i18n="Tables">Tipe Bis</div>
             </a>
         </li>
         <!-- Paket Bis -->
-        <li class="menu-item">
-            <a href="/" class="menu-link {{request()->segment(1) == "paketbis" ? "active" : ""}}">
+        <li class="menu-item  {{request()->segment(1) == "paketbis" ? "active" : ""}}">
+            <a href="/" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-purchase-tag-alt bx-sm"></i>
                 <div data-i18n="Tables">Paket Bis</div>
             </a>
         </li>
         <!-- Pembelian -->
-        <li class="menu-item">
-            <a href="/" class="menu-link {{request()->segment(1) == "pembelian" ? "active" : ""}}">
+        <li class="menu-item  {{request()->segment(1) == "pembelian" ? "active" : ""}}">
+            <a href="/" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-food-menu bx-sm"></i>
                 <div data-i18n="Tables">Pembelian</div>
             </a>
