@@ -11,12 +11,12 @@ class TipeBisController extends Controller
     function index()
     {
         $tipeBisData = TipeBis::get();
-        return view('pages.tipe_bis.index', compact('tipeBisData'));
+        return view('backend.tipe_bis.index', compact('tipeBisData'));
     }
 
     function create()
     {
-        return view('pages.tipe_bis.create');
+        return view('backend.tipe_bis.create');
     }
 
     function store(Request $request)
@@ -33,7 +33,7 @@ class TipeBisController extends Controller
     function edit($id)
     {
         $tipeBisData = TipeBis::find($id);
-        return view('pages.tripe_bis.edit', compact('tipeBisData'));
+        return view('backend.tipe_bis.edit', compact('tipeBisData'));
     }
 
     function update($id, Request $request)

@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */ 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+/*Route::get('/', function () {
+    return view('welcome');
+});*/
 Route::get('/', function () {
     return view('cek');
 });
+Route::get('/index', function () {
+    return view('backend.dashboard');
+});
+
+/* Route Tipe Bis */
+Route::get('/tipebis', [TipeBisController::class, 'index']);
+Route::get('/tipebis/create', [TipeBisController::class, 'create']);
+Route::post('/tipebis/simpan-data', [TipeBisController::class, 'store']);
+
+Route::get('/tipebis/edit/{id}', [TipeBisController::class, 'edit']);
+Route::post('/tipebis/update/{id}', [TipeBisController::class, 'update']);
+Route::get('/tipebis/delete/{id}', [TipeBisController::class, 'delete']);
