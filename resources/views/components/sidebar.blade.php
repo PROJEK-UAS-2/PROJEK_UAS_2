@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="/master" class="app-brand-link">
+        <a href="/index" class="app-brand-link">
             <i class="bx bxs-bus bx-lg"></i>
             <span class="app-brand-text demo menu-text fw-bolder ms-2">Blue Bus</span>
         </a>
@@ -16,9 +16,38 @@
         <!-- Dashboard -->
         <li class="menu-item {{request()->segment(1) == "index" ? "active" : ""}}">
             <a href="index" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <i class="menu-icon tf-icons bx bx-home bx-sm"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
+        </li>
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bxs-group bx-sm"></i>
+                <div data-i18n="Our Team">Our Team</div>
+            </a>
+
+            <ul class="menu-sub">   
+                <li class="menu-item">
+                    <a href="/" class="menu-link">
+                        <div data-i18n="Alsya Majandra">Alsya Majandra</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/" class="menu-link">
+                        <div data-i18n="Fahmi Alhafizh">Fahmi Alhafizh</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/" class="menu-link">
+                        <div data-i18n="Iqlima Fasha">Iqlima Fasha</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/" class="menu-link">
+                        <div data-i18n="Janet Berliana">Janet Berliana</div>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Admin | Pages</span>

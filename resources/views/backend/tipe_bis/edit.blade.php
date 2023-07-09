@@ -2,7 +2,7 @@
  
 @section('content') 
     <div class="container-fluid px-4"> 
-        <h1 class="mt-4">Tipe Bis</h1> 
+        <h1 class="mt-4"><i class="bx bxs-car-wash bx-md"></i> Tipe Bis</h1> 
         <div class="d-flex justify-content-between mb-3"> 
             <!-- Breadcrum -->
             <nav aria-label="breadcrumb">

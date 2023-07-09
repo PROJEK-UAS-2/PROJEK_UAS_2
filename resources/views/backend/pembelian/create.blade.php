@@ -2,7 +2,7 @@
  
 @section('content') 
     <div class="container-fluid px-4"> 
-        <h1 class="mt-4">Pembelian</h1> 
+        <h1 class="mt-4"><i class="bx bxs-food-menu bx-md"></i> Pembelian</h1> 
         <div class="d-flex justify-content-between mb-3"> 
         <!-- Breadcrum -->
         <nav aria-label="breadcrumb">
@@ -27,28 +27,28 @@
                     @csrf 
                     <div class="form-group"> 
                         <label for="">Nama Penumpang</label> 
-                        <input type="text" class="form-control" name="pembelian" required> 
-					</div> 
+                        <input type="text" class="form-control" name="nama_penumpang" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Domisili</label> 
-                        <input type="text" class="form-control" name="pembelian" required> 
-					</div>
+                        <input type="text" class="form-control" name="domisili" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Tanggal Pembelian</label> 
-                        <input type="date" class="form-control" name="pembelian" required> 
-					</div>
+                        <input type="date" class="form-control" name="tanggal_pembelian" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Tanggal Keberangkatan</label> 
-                        <input type="date" class="form-control" name="pembelian" required> 
-					</div>
+                        <input type="date" class="form-control" name="tanggal_keberangkatan" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Domisili Tujuan</label> 
-                        <input type="text" class="form-control" name="pembelian" required> 
-					</div>
+                        <input type="text" class="form-control" name="domisili_tujuan" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Paket Bis ID</label> 
-                        <input type="text" class="form-control" name="pembelian" required> 
-					</div>
+                        <input type="text" class="form-control" name="paket_bis_id" required> 
+					</div><br>
                     <div class="form-group mt-3"> 
                         <button class="form-control btn btn-primary" type="submit">Simpan</button><br><br>
                         <button class="form-control btn btn-outline-danger" type="reset">Reset</button>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Paket Bis</h1>
+        <h1 class="mt-4"><i class="bx bx-purchase-tag-alt bx-md"></i> Paket Bis</h1>
         <div class="d-flex justify-content-between mb-3">
             <!-- Breadcrum -->
         <nav aria-label="breadcrumb">
@@ -18,6 +18,18 @@
         <!-- /Breadcrumb -->
         <a href="/paketbis/create" class="btn btn-primary">Tambah Data <i class='bx bx-plus-circle' ></i></a>
         </div>
+        @if(session('message'))
+        <br><div class="alert alert-primary alert-dismissible" role="alert">
+            Yeay✔,Kamu berhasil <strong>menambahkan</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
+        @if(session('pesan'))
+        <br><div class="alert alert-info alert-dismissible" role="alert">
+            Yeay🎉,Kamu berhasil <strong>mengedit</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
         <div class="card shadow">
             <div class="card-body">
                 <div class="table-responsive">
@@ -27,6 +39,7 @@
                                 <th>#</th>
                                 <th>Bis ID</th>
                                 <th>Harga Tiket</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -34,9 +47,9 @@
                             @foreach($paketBisData as $paketBis)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$bis_id->bis_id}}</td>
-                                <td>{{$harga_tiket->harga_tiket}}</td>
-                                <td><span class="badge bg-label-success me-1">Active</span></td>
+                                <td>{{$paketBis->bis_id}}</td>
+                                <td>{{$paketBis->harga_tiket}}</td>
+                                <td><span class="badge bg-label-danger me-1">Blocked</span></td>
                                 <td>
                                     <a href="/paketbis/edit/{{ $paketBis->id }}">
                                     <button type="button" class="btn rounded-pill btn-icon btn-outline-warning">

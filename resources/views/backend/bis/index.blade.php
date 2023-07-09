@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Bis</h1>
+        <h1 class="mt-4"><i class=" bx bx-bus bx-md"></i> Bis</h1>
         <div class="d-flex justify-content-between mb-3">
-            <!-- Breadcrum -->
+        <!-- Breadcrum -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1">
                 <li class="breadcrumb-item">
@@ -18,6 +18,18 @@
         <!-- /Breadcrumb -->
         <a href="/bis/create" class="btn btn-primary">Tambah Data <i class='bx bx-plus-circle' ></i></a>
         </div>
+        @if(session('message'))
+        <br><div class="alert alert-primary alert-dismissible" role="alert">
+            Yeay✔,Kamu berhasil <strong>menambahkan</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
+        @if(session('pesan'))
+        <br><div class="alert alert-info alert-dismissible" role="alert">
+            Yeay🎉,Kamu berhasil <strong>mengedit</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
         <div class="card shadow">
             <div class="card-body">
                 <div class="table-responsive">
@@ -38,13 +50,12 @@
                             @foreach($bisData as $bis)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$nama->nama}}</td>
-                                <td>{{$kode->kode}}</td>
-                                <td>{{$nomor_polisi->nomor_polisi}}</td>
-                                <td>{{$jumlah_unit->jumlah_unit}}</td>
-                                <td>{{$jurusan->jurusan}}</td>
-                                <td>{{$tipe_bis_id->tipe_bis_id}}</td>
-                                <td><span class="badge bg-label-success me-1">Active</span></td>
+                                <td>{{$bis->nama}}</td>
+                                <td>{{$bis->kode}}</td>
+                                <td>{{$bis->nomor_polisi}}</td>
+                                <td>{{$bis->jumlah_unit}}</td>
+                                <td>{{$bis->jurusan}}</td>
+                                <td>{{$bis->tipe_bis_id}}</td>
                                 <td>
                                     <a href="/bis/edit/{{ $bis->id }}">
                                     <button type="button" class="btn rounded-pill btn-icon btn-outline-warning">
@@ -55,14 +66,14 @@
                                         <span class="tf-icons bx bxs-trash"></span>
                                     </button>
                                     <!-- Modal 1-->
-                                    <div class="modal fade" id="modalToggle">
+                                    <div class="modal fade" id="modalToggle" >
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="alert alert-danger" role="alert">This is a danger alert -- check it out ! <i class="bx bxs-error-alt"></i></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                 </div>
-                                                <div class="modal-body">Are you sure, you want to delete type {{$nama->nama}} ?</div>
+                                                <div class="modal-body">Are you sure, you want to delete type {{$bis->nama}} ?</div>
                                                 <div class="modal-footer">
                                                     <a href="/bis/delete/{{ $bis->id }}">
                                                     <button class="btn btn-danger" >

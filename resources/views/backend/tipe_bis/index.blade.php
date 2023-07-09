@@ -18,6 +18,18 @@
         <!-- /Breadcrumb -->
         <a href="/tipebis/create" class="btn btn-primary">Tambah Data <i class='bx bx-plus-circle' ></i></a>
         </div>
+        @if(session('message'))
+        <br><div class="alert alert-primary alert-dismissible" role="alert">
+            Yeay✔,Kamu berhasil <strong>menambahkan</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
+        @if(session('pesan'))
+        <br><div class="alert alert-info alert-dismissible" role="alert">
+            Yeay🎉,Kamu berhasil <strong>mengedit</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
         <div class="card shadow">
             <div class="card-body">
                 <div class="table-responsive">
@@ -35,7 +47,7 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$tipeBis->tipe}}</td>
-                                <td><span class="badge bg-label-success me-1">Active</span></td>
+                                <td><span class="badge bg-label-warning me-1">Pending</span></td>
                                 <td>
                                     <a href="/tipebis/edit/{{ $tipeBis->id }}">
                                     <button type="button" class="btn rounded-pill btn-icon btn-outline-warning">

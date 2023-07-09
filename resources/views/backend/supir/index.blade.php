@@ -18,6 +18,18 @@
         <!-- /Breadcrumb -->
         <a href="/supir/create" class="btn btn-primary">Tambah Data <i class='bx bx-plus-circle' ></i></a>
         </div>
+        @if(session('message'))
+        <br><div class="alert alert-primary alert-dismissible" role="alert">
+            Yeay✔,Kamu berhasil <strong>menambahkan</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
+        @if(session('pesan'))
+        <br><div class="alert alert-info alert-dismissible" role="alert">
+            Yeay🎉,Kamu berhasil <strong>mengedit</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
         <div class="card shadow">
             <div class="card-body">
                 <div class="table-responsive">
@@ -38,11 +50,11 @@
                             @foreach($supirData as $supir)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$nama_supir->nama_supir}}</td>
-                                <td>{{$kode_supir->kode_supir}}</td>
-                                <td>{{$kontak_1->kontak_1}}</td>
-                                <td>{{$kontak_2->kontak_2}}</td>
-                                <td>{{$bis_id->bis_id}}</td>
+                                <td>{{$supir->nama_supir}}</td>
+                                <td>{{$supir->kode_supir}}</td>
+                                <td>{{$supir->kontak_1}}</td>
+                                <td>{{$supir->kontak_2}}</td>
+                                <td>{{$supir->bis_id}}</td>
                                 <td><span class="badge bg-label-success me-1">Active</span></td>
                                 <td>
                                     <a href="/supir/edit/{{ $supir->id }}">
@@ -61,7 +73,7 @@
                                                     <h5 class="alert alert-danger" role="alert">This is a danger alert -- check it out ! <i class="bx bxs-error-alt"></i></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                 </div>
-                                                <div class="modal-body">Are you sure, you want to delete type {{$nama_supir->nama_supir}} ?</div>
+                                                <div class="modal-body">Are you sure, you want to delete type {{$supir->nama_supir}} ?</div>
                                                 <div class="modal-footer">
                                                     <a href="/supir/delete/{{ $supir->id }}">
                                                     <button class="btn btn-danger" >

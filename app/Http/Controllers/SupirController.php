@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\supir;
+use App\Models\Supir;
 use Illuminate\Http\Request;
 
 class SupirController extends Controller
@@ -29,6 +29,8 @@ class SupirController extends Controller
 
         Supir::create($supirData);
 
+        session()->flash('message','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
+
         return redirect()->to('/supir');
     }
 
@@ -50,6 +52,8 @@ class SupirController extends Controller
 
         $supirData = Supir::find($id);
         $supirData->update($validasiSupir);
+
+        session()->flash('pesan','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
 
         return redirect()->to('/supir');
     }

@@ -2,7 +2,7 @@
  
 @section('content') 
     <div class="container-fluid px-4"> 
-        <h1 class="mt-4">Supir</h1> 
+        <h1 class="mt-4"><i class="bx bx-user bx-md"></i> Supir</h1> 
         <div class="d-flex justify-content-between mb-3"> 
             <!-- Breadcrum -->
             <nav aria-label="breadcrumb">
@@ -27,23 +27,23 @@
                     @csrf 
                     <div class="form-group"> 
                         <label for="">Nama Supir</label> 
-                        <input type="text" class="form-control" name="supir" value="{{$supirData->nama_supir}}" required> 
-					</div> 
+                        <input type="text" class="form-control" name="nama_supir" value="{{$supirData->nama_supir}}" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Kode Supir</label> 
-                        <input type="text" class="form-control" name="supir" value="{{$supirData->kode_supir}}" required> 
-					</div>
+                        <input type="text" class="form-control" name="Kode_supir" value="{{$supirData->kode_supir}}" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Kontak 1</label> 
-                        <input type="text" class="form-control" name="supir" value="{{$supirData->kontak_1}}" required> 
-					</div>
+                        <input type="tel" class="form-control" name="Kontak_1" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" value="{{$supirData->kontak_1}}" placeholder="format : 1234-5678-9123" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Kontak 2</label> 
-                        <input type="text" class="form-control" name="supir" value="{{$supirData->kontak_2}}" required> 
-					</div>
+                        <input type="tel" class="form-control" name="kontak_2" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" value="{{$supirData->kontak_2}}" placeholder="format : 1234-5678-9123" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Bis ID</label> 
-                        <input type="text" class="form-control" name="supir" value="{{$supirData->bis_id}}" required> 
+                        <input type="number" class="form-control" name="bis_id" value="{{$supirData->bis_id}}" required>
 					</div>
                     <div class="form-group mt-3"> 
                         <button class="form-control btn btn-primary" type="submit">Simpan</button> 

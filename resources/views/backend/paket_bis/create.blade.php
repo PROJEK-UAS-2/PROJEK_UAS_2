@@ -2,7 +2,7 @@
  
 @section('content') 
     <div class="container-fluid px-4"> 
-        <h1 class="mt-4">Paket Bis</h1> 
+        <h1 class="mt-4"><i class="bx bx-purchase-tag-alt bx-md"></i> Paket Bis</h1> 
         <div class="d-flex justify-content-between mb-3"> 
         <!-- Breadcrum -->
         <nav aria-label="breadcrumb">
@@ -27,12 +27,12 @@
                     @csrf 
                     <div class="form-group"> 
                         <label for="">Bis ID</label> 
-                        <input type="text" class="form-control" name="paket" required> 
-					</div>
+                        <input type="number" class="form-control" name="bis_id" required> 
+					</div><br>
                     <div class="form-group"> 
                         <label for="">Harga Tiket</label> 
-                        <input type="text" class="form-control" name="paket" required> 
-					</div> 
+                        <input type="number" class="form-control" name="harga_tiket" required> 
+					</div><br>
                     <div class="form-group mt-3"> 
                         <button class="form-control btn btn-outline-primary" type="submit">Simpan</button> <br><br>
                         <button class="form-control btn btn-outline-danger" type="reset">Reset</button>
@@ -41,4 +41,4 @@
             </div> 
         </div> 
     </div> 
-        @endsection
+@endsection

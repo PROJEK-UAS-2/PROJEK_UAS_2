@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Pembelian</h1>
+        <h1 class="mt-4"><i class="bx bxs-food-menu bx-md"></i> Pembelian</h1>
         <div class="d-flex justify-content-between mb-3">
             <!-- Breadcrum -->
         <nav aria-label="breadcrumb">
@@ -18,6 +18,18 @@
         <!-- /Breadcrumb -->
         <a href="/pembelian/create" class="btn btn-primary">Tambah Data <i class='bx bx-plus-circle' ></i></a>
         </div>
+        @if(session('message'))
+        <br><div class="alert alert-primary alert-dismissible" role="alert">
+            Yeay✔,Kamu berhasil <strong>menambahkan</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
+        @if(session('pesan'))
+        <br><div class="alert alert-info alert-dismissible" role="alert">
+            Yeay🎉,Kamu berhasil <strong>mengedit</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
         <div class="card shadow">
             <div class="card-body">
                 <div class="table-responsive">
@@ -38,13 +50,12 @@
                             @foreach($pembelianData as $pembelian)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$nama_penumpang->nama_penumpang}}</td>
-                                <td>{{$domisili->domisili}}</td>
-                                <td>{{$tanggal_pembelian->tanggal_pembelian}}</td>
-                                <td>{{$tanggal_keberangkatan->tanggal_keberangkatan}}</td>
-                                <td>{{$domisili_tujuan->domisili_tujuan}}</td>
-                                <td>{{$paket_bis_id->paket_bis_id}}</td>
-                                <td><span class="badge bg-label-success me-1">Active</span></td>
+                                <td>{{$pembelian->nama_penumpang}}</td>
+                                <td>{{$pembelian->domisili}}</td>
+                                <td>{{$pembelian->tanggal_pembelian}}</td>
+                                <td>{{$pembelian->tanggal_keberangkatan}}</td>
+                                <td>{{$pembelian->domisili_tujuan}}</td>
+                                <td>{{$pembelian->paket_bis_id}}</td>
                                 <td>
                                     <a href="/pembelian/edit/{{ $pembelian->id }}">
                                     <button type="button" class="btn rounded-pill btn-icon btn-outline-warning">
@@ -62,7 +73,7 @@
                                                     <h5 class="alert alert-danger" role="alert">This is a danger alert -- check it out ! <i class="bx bxs-error-alt"></i></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                 </div>
-                                                <div class="modal-body">Are you sure, you want to delete type {{$nama_penumpang->nama_penumpang}} ?</div>
+                                                <div class="modal-body">Are you sure, you want to delete type {{$pembelian->nama_penumpang}} ?</div>
                                                 <div class="modal-footer">
                                                     <a href="/pembelian/delete/{{ $pembelian->id }}">
                                                     <button class="btn btn-danger" >

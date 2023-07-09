@@ -20,14 +20,17 @@ class PembelianController extends Controller
     function store(Request $request)
     {
         $pembelianData = $request->validate([
-            'nama_pembelian' => 'required',
-            'kode_pembelian' => 'required',
-            'kontak_1' => 'required',
-            'kontak_2' => 'required',
-            'bis_id' => 'required'
+            'nama_penumpang' => 'required', 
+            'domisili' => 'required',
+            'tanggal_pembelian' => 'required',
+            'tanggal_keberangkatan' => 'required',
+            'domisili_tujuan' => 'required',
+            'paket_bis_id'=> 'required'
         ]);
 
         Pembelian::create($pembelianData);
+
+        session()->flash('message','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
 
         return redirect()->to('/pembelian');
     }
@@ -52,6 +55,8 @@ class PembelianController extends Controller
 
         $pembelianData = Pembelian::find($id);
         $pembelianData->update($validasipembelian);
+
+        session()->flash('pesan','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
 
         return redirect()->to('/pembelian');
     }

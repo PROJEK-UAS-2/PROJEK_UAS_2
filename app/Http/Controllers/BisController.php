@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Bis; 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class BisController extends Controller
 {
-    protected $arrayBis = [];
 
     function index()
     {
@@ -32,6 +33,8 @@ class BisController extends Controller
 
         Bis::create($bisData);
 
+        session()->flash('message','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
+
         return redirect()->to('/bis');
     }
 
@@ -54,6 +57,8 @@ class BisController extends Controller
 
         $bisData = Bis::find($id);
         $bisData->update($validasiBis);
+
+        session()->flash('pesan','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
 
         return redirect()->to('/bis');
     }

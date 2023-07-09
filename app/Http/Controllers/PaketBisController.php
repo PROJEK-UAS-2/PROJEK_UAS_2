@@ -20,21 +20,20 @@ class PaketBisController extends Controller
     function store(Request $request)
     {
         $paketBisData = $request->validate([
-            'nama_paketBis' => 'required',
-            'kode_paketBis' => 'required',
-            'kontak_1' => 'required',
-            'kontak_2' => 'required',
-            'bis_id' => 'required'
+            'bis_id' => 'required',
+            'harga_tiket' => 'required'
         ]);
 
-        paketBis::create($paketBisData);
+        PaketBis::create($paketBisData);
+
+        session()->flash('message','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
 
         return redirect()->to('/paketbis');
     }
 
     function edit($id)
     {
-        $paketBisData = paketBis::find($id);
+        $paketBisData = PaketBis::find($id);
         return view('backend.paket_bis.edit', compact('paketBisData'));
     }
 
@@ -48,6 +47,8 @@ class PaketBisController extends Controller
 
         $paketBisData = PaketBis::find($id);
         $paketBisData->update($validasipaketBis);
+
+        session()->flash('pesan','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
 
         return redirect()->to('/paketbis');
     }
