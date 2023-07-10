@@ -26,7 +26,7 @@ class PaketBisController extends Controller
 
         PaketBis::create($paketBisData);
 
-        session()->flash('message','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
+        session()->flash('create','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
 
         return redirect()->to('/paketbis');
     }
@@ -48,7 +48,7 @@ class PaketBisController extends Controller
         $paketBisData = PaketBis::find($id);
         $paketBisData->update($validasipaketBis);
 
-        session()->flash('pesan','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
+        session()->flash('edit','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
 
         return redirect()->to('/paketbis');
     }
@@ -57,6 +57,9 @@ class PaketBisController extends Controller
     {
         $paketBisData = PaketBis::find($id);
         $paketBisData->delete();
+
+        session()->flash('delete','Yeay👍,Kamu berhasil <strong>menghapus</strong> data');
+
         return redirect()->to('/paketbis');
     }
 }

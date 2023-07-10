@@ -33,7 +33,7 @@ class BisController extends Controller
 
         Bis::create($bisData);
 
-        session()->flash('message','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
+        session()->flash('create','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
 
         return redirect()->to('/bis');
     }
@@ -58,7 +58,7 @@ class BisController extends Controller
         $bisData = Bis::find($id);
         $bisData->update($validasiBis);
 
-        session()->flash('pesan','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
+        session()->flash('edit','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
 
         return redirect()->to('/bis');
     }
@@ -67,6 +67,9 @@ class BisController extends Controller
     {
         $bisData = Bis::find($id);
         $bisData->delete();
+
+        session()->flash('delete','Yeay👍,Kamu berhasil <strong>menghapus</strong> data');
+
         return redirect()->to('/bis');
     }
 }

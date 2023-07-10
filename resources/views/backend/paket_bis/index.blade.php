@@ -18,15 +18,21 @@
         <!-- /Breadcrumb -->
         <a href="/paketbis/create" class="btn btn-primary">Tambah Data <i class='bx bx-plus-circle' ></i></a>
         </div>
-        @if(session('message'))
-        <br><div class="alert alert-primary alert-dismissible" role="alert">
+        @if(session('create'))
+        <br><div class="alert alert-success alert-dismissible" role="alert">
             Yeay✔,Kamu berhasil <strong>menambahkan</strong> data
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div><br>
         @endif
-        @if(session('pesan'))
-        <br><div class="alert alert-info alert-dismissible" role="alert">
+        @if(session('edit'))
+        <br><div class="alert alert-warning alert-dismissible" role="alert">
             Yeay🎉,Kamu berhasil <strong>mengedit</strong> data
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div><br>
+        @endif
+        @if(session('delete'))
+        <br><div class="alert alert-danger alert-dismissible" role="alert">
+            Yeay👍,Kamu berhasil <strong>menghapus</strong> data
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div><br>
         @endif
@@ -56,18 +62,18 @@
                                         <span class="tf-icons bx bxs-pencil"></span>
                                     </button>
                                     </a>
-                                    <button type="button" class="btn rounded-pill btn-icon btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalToggle">
+                                    <button type="button" class="btn rounded-pill btn-icon btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete{{$paketBis->id}}">
                                         <span class="tf-icons bx bxs-trash"></span>
                                     </button>
                                     <!-- Modal 1-->
-                                    <div class="modal fade" id="modalToggle">
+                                    <div class="modal fade" id="delete{{$paketBis->id}}">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="alert alert-danger" role="alert">This is a danger alert -- check it out ! <i class="bx bxs-error-alt"></i></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                 </div>
-                                                <div class="modal-body">Are you sure, you want to delete type {{$paketBis->paket}} ?</div>
+                                                <div class="modal-body">Are you sure, you want to delete type {{$paketBis->bis_id}} ?</div>
                                                 <div class="modal-footer">
                                                     <a href="/paketbis/delete/{{ $paketBis->id }}">
                                                     <button class="btn btn-danger" >

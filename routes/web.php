@@ -14,14 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */ 
 
-/*Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
-});*/
+});
 Route::get('/', function () {
     return view('cek');
 });
 Route::get('/index', function () {
     return view('backend.dashboard');
+});
+Route::get('/alsya', function () {
+    return view('admin.alsya');
+});
+Route::get('/fahmi', function () {
+    return view('admin.fahmi');
+});
+Route::get('/iqlima', function () {
+    return view('admin.iqlima');
+});
+Route::get('/janet', function () {
+    return view('admin.janet');
 });
 
 /* Route Tipe Bis */

@@ -49,7 +49,7 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="/">
+                        <a class="dropdown-item" href="/alsya">
                             <i class="bx bx-group me-2"></i>
                             <span class="align-middle">Our Team</span>
                         </a>

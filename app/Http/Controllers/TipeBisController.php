@@ -27,7 +27,7 @@ class TipeBisController extends Controller
 
         TipeBis::create($tipeBisData);
 
-        session()->flash('message','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
+        session()->flash('create','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
 
         return redirect()->to('/tipebis');
     }
@@ -47,7 +47,7 @@ class TipeBisController extends Controller
         $tipeBisData = TipeBis::find($id);
         $tipeBisData->update($validasiTipeBis);
 
-        session()->flash('pesan','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
+        session()->flash('edit','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
 
         return redirect()->to('/tipebis');
     }
@@ -56,6 +56,9 @@ class TipeBisController extends Controller
     {
         $tipeBisData = TipeBis::find($id);
         $tipeBisData->delete();
+
+        session()->flash('delete','Yeay👍,Kamu berhasil <strong>menghapus</strong> data');
+
         return redirect()->to('/tipebis');
     }
 }

@@ -30,7 +30,7 @@ class PembelianController extends Controller
 
         Pembelian::create($pembelianData);
 
-        session()->flash('message','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
+        session()->flash('create','Yeay✔,Kamu berhasil <strong>menambahkan</strong> data');
 
         return redirect()->to('/pembelian');
     }
@@ -56,7 +56,7 @@ class PembelianController extends Controller
         $pembelianData = Pembelian::find($id);
         $pembelianData->update($validasipembelian);
 
-        session()->flash('pesan','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
+        session()->flash('edit','Yeay🎉,Kamu berhasil <strong>mengedit</strong> data');
 
         return redirect()->to('/pembelian');
     }
@@ -65,6 +65,9 @@ class PembelianController extends Controller
     {
         $pembelianData = Pembelian::find($id);
         $pembelianData->delete();
+
+        session()->flash('delete','Yeay👍,Kamu berhasil <strong>menghapus</strong> data');
+
         return redirect()->to('/pembelian');
     }
 }
