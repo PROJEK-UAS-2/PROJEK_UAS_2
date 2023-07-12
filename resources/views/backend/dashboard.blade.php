@@ -19,7 +19,7 @@
                 <div class="d-flex align-items-end row">
                     <div class="col-sm-7">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
+                            <h5 class="card-title text-primary">Congratulations <b>{{Auth::user()->name}}</b> ! 🎉</h5>
                             <p class="mb-4">
                                 You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
                                 your profile.
@@ -125,7 +125,7 @@
         </div>
         <div class="col">
             <div class="card h-100">
-                <img class="card-img-top" src="../assets/img/elements/2.jpg" alt="Card image cap" />
+                <img class="card-img-top" src="{{asset('assets/img/elements/7.jpg')}}" alt="Card image cap" />
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">

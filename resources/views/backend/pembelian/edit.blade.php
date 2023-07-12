@@ -47,8 +47,13 @@
 					</div>
                     <div class="form-group"> 
                         <label for="">Paket Bis ID</label> 
-                        <input type="text" class="form-control" name="paket_bis_id" value="{{$pembelianData->paket_bis_id}}" required> 
-					</div>
+                        <select name="paket_bis_id" class="form-control">
+                            <option value="">-- Paket Bis ID --</option>
+                            @foreach ($paketBisData as $paket)
+                                <option value="{{ $paket->id }}">{{ $paket->bis_id }}</option>
+                            @endforeach
+                        </select><br>
+					</div><br>
                     <div class="form-group mt-3"> 
                         <button class="form-control btn btn-primary" type="submit">Simpan</button> 
                     </div> 

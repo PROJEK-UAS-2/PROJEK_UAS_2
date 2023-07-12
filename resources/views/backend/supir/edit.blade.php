@@ -31,11 +31,11 @@
 					</div><br>
                     <div class="form-group"> 
                         <label for="">Kode Supir</label> 
-                        <input type="text" class="form-control" name="Kode_supir" value="{{$supirData->kode_supir}}" required> 
+                        <input type="text" class="form-control" name="kode_supir" value="{{$supirData->kode_supir}}" required> 
 					</div><br>
                     <div class="form-group"> 
                         <label for="">Kontak 1</label> 
-                        <input type="tel" class="form-control" name="Kontak_1" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" value="{{$supirData->kontak_1}}" placeholder="format : 1234-5678-9123" required> 
+                        <input type="tel" class="form-control" name="kontak_1" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" value="{{$supirData->kontak_1}}" placeholder="format : 1234-5678-9123" required> 
 					</div><br>
                     <div class="form-group"> 
                         <label for="">Kontak 2</label> 
@@ -43,8 +43,13 @@
 					</div><br>
                     <div class="form-group"> 
                         <label for="">Bis ID</label> 
-                        <input type="number" class="form-control" name="bis_id" value="{{$supirData->bis_id}}" required>
-					</div>
+                        <select name="bis_id" class="form-control" required>
+                            <option value="">-- Bis ID --</option>
+                            @foreach ($bisData as $bis)
+                                <option value="{{ $bis->id }}">{{ $bis->nama }}</option>
+                            @endforeach
+                        </select><br>
+					</div><br>
                     <div class="form-group mt-3"> 
                         <button class="form-control btn btn-primary" type="submit">Simpan</button> 
                     </div> 

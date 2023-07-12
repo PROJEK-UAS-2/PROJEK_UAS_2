@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Bis; 
+use App\Models\Bis;
+use App\Models\TipeBis;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
 
 class BisController extends Controller
 {
-
     function index()
     {
         $bisData = Bis::get();
@@ -17,7 +17,8 @@ class BisController extends Controller
 
     function create()
     {
-        return view('backend.bis.create');
+        $tipeBisData = TipeBis::get();
+        return view('backend.bis.create', compact('tipeBisData'));
     }
 
     function store(Request $request)
@@ -41,7 +42,8 @@ class BisController extends Controller
     function edit($id)
     {
         $bisData = Bis::find($id);
-        return view('backend.bis.edit', compact('bisData'));
+        $tipeBisData = TipeBis::get();
+        return view('backend.bis.edit', compact('bisData', 'tipeBisData'));
     }
 
     function update($id, Request $request)

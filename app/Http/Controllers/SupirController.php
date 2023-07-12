@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Bis;
 use App\Models\Supir;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class SupirController extends Controller
 {
@@ -14,7 +17,8 @@ class SupirController extends Controller
 
     function create()
     {
-        return view('backend.supir.create');
+        $bisData = Bis::get();
+        return view('backend.supir.create', compact('bisData'));
     }
 
     function store(Request $request)
@@ -36,8 +40,9 @@ class SupirController extends Controller
 
     function edit($id)
     {
+        $bisData = Bis::get();
         $supirData = Supir::find($id);
-        return view('backend.supir.edit', compact('supirData'));
+        return view('backend.supir.edit', compact('supirData', 'bisData'));
     }
 
     function update($id, Request $request)

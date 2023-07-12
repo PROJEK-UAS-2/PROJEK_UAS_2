@@ -46,9 +46,14 @@
                         <input type="text" class="form-control" name="jurusan" value="{{$bisData->jurusan}}" required> 
 					</div>
                     <div class="form-group"> 
-                        <label for="">Tipe Bis ID</label> 
-                        <input type="number" class="form-control" name="tipe_bis_id" value="{{$bisData->tipe_bis_id}}" required> 
-					</div>
+                        <label for="">Tipe Bis </label> 
+                        <select name="tipe_bis_id" class="form-control" required>
+                            <option value="">-- Tipe Bis --</option>
+                            @foreach ($tipeBisData as $tipe)
+                                <option value="{{ $tipe->id }}">{{ $tipe->tipe }}</option>
+                            @endforeach
+                        </select><br>
+					</div><br>
                     <div class="form-group mt-3"> 
                         <button class="form-control btn btn-primary" type="submit">Simpan</button> 
                     </div> 

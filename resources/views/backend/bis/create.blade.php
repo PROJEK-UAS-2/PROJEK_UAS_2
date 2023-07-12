@@ -49,13 +49,10 @@
                         <label for="">Tipe Bis </label> 
                         <select name="tipe_bis_id" class="form-control">
                             <option value="">-- Tipe Bis --</option>
-                            @foreach ($tipeBisData as $tipe => $tipe)
-                            <option value="{{ $tipe }}" @selected(old('tipe_bis_id') == $tipe)>
-                                {{ $tipe }}
-                            </option>
+                            @foreach ($tipeBisData as $tipe)
+                                <option value="{{ $tipe->id }}">{{ $tipe->tipe }}</option>
                             @endforeach
                         </select><br>
-                        {{-- <input type="number" class="form-control" name="tipe_bis_id" required> --}}
 					</div><br>
                     <div class="form-group mt-3"> 
                         <button class="form-control btn btn-primary" type="submit">Simpan</button><br><br>

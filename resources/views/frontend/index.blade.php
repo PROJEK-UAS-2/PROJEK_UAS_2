@@ -10,23 +10,23 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="frontend/img/favicon.ico" rel="icon">
+  <link href="assets/img/favicon/google-maps-bus-icon-8.jpg" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="frontend/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="frontend/vendor/aos/aos.css" rel="stylesheet">
-  <link href="frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="frontend/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="frontend/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="frontend/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="frontend/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="frontend/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{asset('frontend/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/vendor/aos/aos.css" rel="stylesheet')}}">
+  <link href="{{asset('frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{asset('frontend/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="frontend/css/style.css" rel="stylesheet">
+  <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="fontawesome/css/all.min.css">
 </head>
 
@@ -48,8 +48,7 @@
               <li><a href="#team">Team</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="frontend/produk.php">Product</a></li>
-          <li><a class="nav-link scrollto" href="backend/index.php">Admin</a></li>
+          <li><a class="nav-link scrollto" href="/login">Admin</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -174,7 +173,7 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-app">Bus</li>
-              <li data-filter=".filter-card">Microbust</li>
+              <li data-filter=".filter-card">Microbus</li>
               <li data-filter=".filter-web">Bus Double Decker</li>
             </ul>
           </div>
@@ -282,16 +281,16 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
 
         <div class="section-title">
           <h2>Team</h2>
-          <p>Dibalik suksesnya Blue Bus ada orang-orang yang bekerja keras membangun inovasi diatas gagasan</p>
+          <p>Dibalik suksesnya Blue Bus ada orang-orang yang bekerja keras begadang setiap malam</p>
         </div>
 
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="frontend/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img1/team/team-1.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Muhammad Fahmi Alhafiz</h4>
+                <h4>Fahmi Muhammad Alhafizh</h4>
                 <span>Sistem Informasi 2022</span>
                 <p>Tidak ada kesuksesan yang instan, even mie instan harus dimasak dulu</p>
                 <div class="social">
@@ -306,11 +305,11 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
 
           <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="frontend/img/team/qia.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img1/team/qia.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Iqlima Fasha Rizqia</h4>
                 <span>Sistem Informasi 2022</span>
-                <p>Lihatlah dirimu, apakah sudah lebih baik dari hari kemarin?</p>
+                <p>Yuu brik may hat brik may haf</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -332,11 +331,11 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
 
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="frontend/img/team/alsya.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img1/team/alsya.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Alsya Majandra</h4>
                 <span>Sistem Informasi 2022</span>
-                <p>Tidak ada kesuksesan yang instan, even mie instan harus dimasak dulu</p>
+                <p>No pork, No lard, klo No WA kamu mana?</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -349,11 +348,11 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
       
         <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="frontend/img/team/janet.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img1/team/janet.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Janet Berliana</h4>
                 <span>Sistem Informasi 2022</span>
-                <p>Lihatlah dirimu, apakah sudah lebih baik dari hari kemarin?</p>
+                <p>Lo punya duit, Lo punya kuasa</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -374,11 +373,15 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>BLUE BUS</span></strong>. All Rights Reserved
+        &copy; 
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <strong><span>BLUE BUS</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <p class="m-0 small">Made with <i class="fa-solid fa-heart"></i> and <i class="fa-solid fa-mug-hot"></i> 
-        by kelompok 1</p>
+        made with ❤️ by
+      <a href="https://nurulfikri.ac.id/" target="_blank" class="footer-link fw-bolder">Student of Nurul Fikri College of Integrated Technology</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -387,15 +390,15 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="frontend/vendor/aos/aos.js"></script>
-  <script src="frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="frontend/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="frontend/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="frontend/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="frontend/vendor/php-email-form/validate.js"></script>
+  <script src="{{asset('frontend/vendor/aos/aos.js')}}"></script>
+  <script src="{{asset('frontend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('frontend/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{asset('frontend/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{asset('frontend/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{asset('frontend/vendor/php-email-form/validate.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="frontend/js/main.js"></script>
+  <script src="{{asset('frontend/js/main.js')}}"></script>
 
 </body>
 

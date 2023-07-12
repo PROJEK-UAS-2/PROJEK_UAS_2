@@ -26,8 +26,13 @@
                 <form action="/paketbis/simpan-data" method="POST"> 
                     @csrf 
                     <div class="form-group"> 
-                        <label for="">Bis ID</label> 
-                        <input type="number" class="form-control" name="bis_id" required> 
+                        <label for="">Bis ID </label> 
+                        <select name="bis_id" class="form-control">
+                            <option value="">-- Bis ID --</option>
+                            @foreach ($bisData as $bis)
+                                <option value="{{ $bis->id }}">{{ $bis->nama }}</option>
+                            @endforeach
+                        </select><br>
 					</div><br>
                     <div class="form-group"> 
                         <label for="">Harga Tiket</label> 

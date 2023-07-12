@@ -48,7 +48,7 @@
                                 <th>Nomor Polisi</th>
                                 <th>Jumlah Unit</th>
                                 <th>Jurusan</th>
-                                <th>Tipe Bis ID</th>
+                                <th>Tipe Bis</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Pembelian; 
+use App\Models\PaketBis;
 use Illuminate\Http\Request;
 
 class PembelianController extends Controller
@@ -14,7 +15,8 @@ class PembelianController extends Controller
 
     function create()
     {
-        return view('backend.pembelian.create');
+        $paketBisData = PaketBis::get();
+        return view('backend.pembelian.create', compact('paketBisData'));
     }
 
     function store(Request $request)
@@ -37,8 +39,9 @@ class PembelianController extends Controller
 
     function edit($id)
     {
+        $paketBisData = PaketBis::get();
         $pembelianData = Pembelian::find($id);
-        return view('backend.pembelian.edit', compact('pembelianData'));
+        return view('backend.pembelian.edit', compact('pembelianData', 'paketBisData'));
     }
 
     function update($id, Request $request)

@@ -52,7 +52,7 @@
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="table-border">
                             @foreach($pembelianData as $pembelian)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
@@ -63,38 +63,40 @@
                                 <td>{{$pembelian->domisili_tujuan}}</td>
                                 <td>{{$pembelian->paket_bis_id}}</td>
                                 <td>
-                                    <a href="/pembelian/edit/{{ $pembelian->id }}">
-                                    <button type="button" class="btn rounded-pill btn-icon btn-outline-warning">
-                                        <span class="tf-icons bx bxs-pencil"></span>
-                                    </button>
-                                    </a>
-                                    <button type="button" class="btn rounded-pill btn-icon btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete{{$pembelian->id}}">
-                                        <span class="tf-icons bx bxs-trash"></span>
-                                    </button>
-                                    <!-- Modal 1-->
-                                    <div class="modal fade" id="delete{{$pembelian->id}}">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="alert alert-danger" role="alert">This is a danger alert -- check it out ! <i class="bx bxs-error-alt"></i></h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                </div>
-                                                <div class="modal-body">Are you sure, you want to delete type {{$pembelian->nama_penumpang}} ?</div>
-                                                <div class="modal-footer">
-                                                    <a href="/pembelian/delete/{{ $pembelian->id }}">
-                                                    <button class="btn btn-danger" >
-                                                        Delete Data 
-                                                    </button>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="/pembelian/edit/{{ $pembelian->id }}">
+                                                <i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                            <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete{{$pembelian->id}}">
+                                                <i class="bx bx-trash me-1"></i> Delete</a>
                                         </div>
-                                    </div>  
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="delete{{$pembelian->id}}">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="alert alert-danger" role="alert">This is a danger alert -- check it out ! <i class="bx bxs-error-alt"></i></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">Are you sure, you want to delete type {{$pembelian->nama_penumpang}} ?</div>
+                    <div class="modal-footer">
+                        <a href="/pembelian/delete/{{ $pembelian->id }}">
+                        <button class="btn btn-danger" >
+                            Delete Data 
+                        </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

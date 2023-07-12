@@ -43,10 +43,12 @@
 					</div><br>
                     <div class="form-group"> 
                         <label for="">Bis ID</label> 
-                        <input type="number" class="form-control" name="bis_id" required>
-                        {{-- <select class="form-control" name="supir" id="">
-                            {{ $supirData = Bis::get()}}
-                        </select><br><br> --}}
+                        <select name="bis_id" class="form-control">
+                            <option value="">-- Bis ID --</option>
+                            @foreach ($bisData as $bis)
+                                <option value="{{ $bis->id }}">{{ $bis->nama }}</option>
+                            @endforeach
+                        </select><br>
 					</div><br>
                     <div class="form-group mt-3"> 
                         <button class="form-control btn btn-primary" type="submit">Simpan</button><br><br>

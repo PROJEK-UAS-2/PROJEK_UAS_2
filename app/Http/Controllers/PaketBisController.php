@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Bis;
 use App\Models\PaketBis; 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class PaketBisController extends Controller
 {
@@ -14,7 +17,8 @@ class PaketBisController extends Controller
 
     function create()
     {
-        return view('backend.paket_bis.create');
+        $bisData = Bis::get();
+        return view('backend.paket_bis.create', compact('bisData'));
     }
 
     function store(Request $request)
@@ -33,8 +37,9 @@ class PaketBisController extends Controller
 
     function edit($id)
     {
+        $bisData = Bis::get();
         $paketBisData = PaketBis::find($id);
-        return view('backend.paket_bis.edit', compact('paketBisData'));
+        return view('backend.paket_bis.edit', compact('paketBisData', 'bisData'));
     }
 
     function update($id, Request $request)
