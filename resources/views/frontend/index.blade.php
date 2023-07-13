@@ -137,8 +137,8 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-motorcycle"></i></div>
-              <h4 class="title"><a href="#!">Cruiser Bike</a></h4>
-              <p class="description">Cruiser bikes is all about quality and dependability. Cruising in comfort from coast to coast. Feel the wind, lean into every curve and experience the freedom in every mile you ride</p>
+              <h4 class="title"><a href="#!">Reservasi Tiket</a></h4>
+              <p class="description">Apa itu reservasi tiket atau Booking tiket? Reservasi adalah proses pemesanan tiket yang dilakukan calon penumpang untuk melakukan penerbangan .</p>
             </div>
           </div>
 
@@ -182,17 +182,17 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="frontend/img/2.jpeg" class="img-fluid" alt="">
+            <img src="assets/img1/7.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4></h4>
               <p></p>
-              <a href="frontend/img/3.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="HONDA CBR600R"><i class="bx bx-plus"></i></a>
+              <a href="assets/img1/7.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="HONDA CBR600R"><i class="bx bx-plus"></i></a>
               <a href="frontend/produk.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="frontend/img/3.jpeg" class="img-fluid" alt="">
+            <img src="assets/img1/3.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4></h4>
               <p></p>
@@ -202,41 +202,41 @@ Masukkan tempat keberangkatan, tujuan, tanggal perjalanan dan kemudian klik 'Car
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="frontend/img/5.jpeg" class="img-fluid" alt="">
+            <img src="assets/img1/5.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4></h4>
               <p><p>
-              <a href="frontend/img/multistrada.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="DUCATI MULTISTRADA V4"><i class="bx bx-plus"></i></a>
+              <a href="assets/img1/multistrada.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="DUCATI MULTISTRADA V4"><i class="bx bx-plus"></i></a>
               <a href="frontend/produk.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="frontend/img/download (3).jpeg" class="img-fluid" alt="">
+            <img src="assets/img1/download (3).jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4></h4>
               <p></p>
-              <a href="frontend/img/yamaha.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="YAMAHA R6"><i class="bx bx-plus"></i></a>
+              <a href="assets/img1/download (3).jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="YAMAHA R6"><i class="bx bx-plus"></i></a>
               <a href="frontend/produk.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="frontend/img/6.jpeg" class="img-fluid" alt="">
+            <img src="assets/img1/6.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4></h4>
               <p></p>
-              <a href="frontend/img/ducati 2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="DUCATI PANIGALE S1200"><i class="bx bx-plus"></i></a>
+              <a href="assets/img1/6.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="DUCATI PANIGALE S1200"><i class="bx bx-plus"></i></a>
               <a href="frontend/produk.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="frontend/img/9.jpeg" class="img-fluid" alt="">
+            <img src="assets/img1/4.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4></h4>
               <p><p>
-              <a href="frontend/img/bmw.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="BMW S1300"><i class="bx bx-plus"></i></a>
+              <a href="assets/img1/4.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="BMW S1300"><i class="bx bx-plus"></i></a>
               <a href="frontend/produk.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
