@@ -31,9 +31,7 @@ Route::get('/register', [Auth\RegisterController::class, 'index']);
 Route::post('/register/proses', [Auth\RegisterController::class, 'register']);
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/index', function () {
-        return view('backend.dashboard');
-    });
+    
     Route::get('/alsya', function () {
         return view('admin.alsya');
     });
@@ -47,6 +45,9 @@ Route::middleware(['auth'])->group(function(){
         return view('admin.janet');
     });
 
+    Route::get('/index', function () {
+        return view('backend.dashboard');
+    });
     /* Route Tipe Bis */
     Route::get('/tipebis', [TipeBisController::class, 'index']);
     Route::get('/tipebis/create', [TipeBisController::class, 'create']);

@@ -64,13 +64,10 @@
                         <p class="mb-4">Make your web management easy and fun!</p>
 
                         <form id="" class="mb-3" action="/register/proses" method="POST">
+                            @csrf
                             <div class="mb-3">
                                 <label for="inputName" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="inputName" name="name" placeholder="Fullname" autofocus/>
-                            </div>
-                            <div class="mb-3">
-                                <label for="inputContact" class="form-label">Contact</label>
-                                <input type="text" class="form-control" id="inputContact" name="contact" placeholder="Contact" />
                             </div>
                             <div class="mb-3">
                                 <label for="inputEmail" class="form-label">Email</label>

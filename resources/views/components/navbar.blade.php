@@ -39,8 +39,8 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <span class="fw-semibold d-block">MinBlue Bus</span>
-                                    <small class="text-muted">Admin {{Auth::user()->name}}</small>
+                                    <span class="fw-semibold d-block">{{Auth::user()->email}}</span>
+                                    <small class="text-muted">Admin</small>
                                 </div>
                             </div>
                         </a>

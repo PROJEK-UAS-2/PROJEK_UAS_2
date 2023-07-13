@@ -16,15 +16,13 @@ class RegisterController extends Controller
     {
         $validatedUser = $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|unique:users',
             'password' => 'required',
-            'contact' => 'required',
         ]);
         $userData = new User;
         $userData->name = $request->name;
         $userData->email = $request->email;
         $userData->password = bcrypt($request->password);
-        $userData->contact = $request->contact;
         $userData->save();
 
         return redirect()->to('/login')->with('sukses', 'Registrasi Berhasil');
