@@ -92,4 +92,5 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/bis/edit/{id}', [BisController::class, 'edit']);
     Route::post('/bis/update/{id}', [BisController::class, 'update']);
     Route::get('/bis/delete/{id}', [BisController::class, 'delete']);
+    
 });

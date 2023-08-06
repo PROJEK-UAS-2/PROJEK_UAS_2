@@ -22,16 +22,19 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($validatedUser)){
+            session()->flash('login');
             return redirect()->to('/index');
         }else {
             return redirect()->to('/login');
         }
+        
     }
     function logout(Request $request)
     {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+        session()->flash('logout');
         return redirect()->to('/login');
     }
 }

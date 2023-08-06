@@ -2,6 +2,24 @@
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="row">
+        @if(session('login'))
+        <template id="jon">
+            <swal-title>
+                Yeay 🥳,Kamu berhasil <strong>login</strong> 
+            </swal-title>
+            <swal-icon type="success" color="green"></swal-icon>
+            <swal-button type="confirm">
+                owkayyy
+            </swal-button>
+            <swal-param name="allowEscapeKey" value="false" />
+            <swal-param
+                name="customClass"
+                value='{ "popup": "my-popup" }' />
+            <swal-function-param
+                name="didOpen"
+                value="popup => console.log(popup)" />
+        </template>
+        @endif
         <!-- Breadcrum -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1">
@@ -24,7 +42,6 @@
                                 You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
                                 your profile.
                             </p>
-
                             <a href="/" class="btn btn-sm btn-outline-primary">View Badges</a>   
                         </div>
                     </div>
@@ -238,4 +255,9 @@
         </div>
     </div>
 </div>
+<script>
+    Swal.fire({
+    template: '#jon'
+    })
+</script>
 @endsection

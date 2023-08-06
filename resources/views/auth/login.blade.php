@@ -35,7 +35,9 @@
     <link rel="stylesheet" href="{{asset('vendor/libs/apex-charts/apex-charts.css')}}" />
 
     <!-- Page CSS -->
-
+    {{-- sweetalerts2 --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css" rel="stylesheet">
     <!-- Helpers -->
     <script src="{{asset('vendor/js/helpers.js')}}"></script>
 
@@ -53,6 +55,24 @@
                 <!-- Register -->
                 <div class="card">
                     <div class="card-body">
+                        @if(session('logout'))
+                        <template id="jon2">
+                            <swal-title>
+                                Oh No 😱,Kamu baru saja <strong>logout</strong> 
+                            </swal-title>
+                            <swal-icon type="warning" color="red"></swal-icon>
+                            <swal-button type="confirm">
+                                yaudaaa
+                            </swal-button>
+                            <swal-param name="allowEscapeKey" value="false" />
+                            <swal-param
+                                name="customClass"
+                                value='{ "popup": "my-popup" }' />
+                            <swal-function-param
+                                name="didOpen"
+                                value="popup => console.log(popup)" />
+                        </template>
+                        @endif
                         <!-- Logo -->
                         <div class="app-brand justify-content-center">
                             <a href="/" class="app-brand-link gap-2">
@@ -126,5 +146,10 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+        Swal.fire({
+        template: '#jon2'
+        })
+    </script>
   </body>
 </html>

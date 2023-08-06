@@ -40,7 +40,9 @@
         <link rel="stylesheet" href="{{asset('vendor/libs/apex-charts/apex-charts.css')}}" />
 
         <!-- Page CSS -->
-
+        {{-- sweetalerts2 --}}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css" rel="stylesheet">
         <!-- Helpers -->
         <script src="{{asset('vendor/js/helpers.js')}}"></script>
 
@@ -108,5 +110,6 @@
 
         <!-- Place this tag in your head or just before your close body tag. -->
         <script async defer src="https://buttons.github.io/buttons.js"></script>
+        
     </body>
 </html> 

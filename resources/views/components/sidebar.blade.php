@@ -13,6 +13,9 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Dashboard</span>
+        </li>
         <!-- Dashboard -->
         <li class="menu-item {{request()->segment(1) == "index" ? "active" : ""}}">
             <a href="index" class="menu-link">
@@ -61,7 +64,11 @@
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Team Behind The Scene</span>
         </li>
-        <li class="menu-item open">
+        <li class="menu-item 
+            {{request()->segment(1) == "fahmi" ? "open" : ""}} 
+            {{request()->segment(1) == "alsya" ? "open" : ""}}
+            {{request()->segment(1) == "iqlima" ? "open" : ""}}
+            {{request()->segment(1) == "janet" ? "open" : ""}}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bxs-group bx-sm"></i>
                 <div data-i18n="Our Team">Our Team</div>
